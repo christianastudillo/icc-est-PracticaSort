@@ -1,12 +1,21 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Metodo de ordenamiento Seleccion");
+        System.out.println("Método de ordenamiento Selección");
         MetodosOrdenamiento mO = new MetodosOrdenamiento();
+        
         int[] arreglo = {10, 5, 8, 2, 0};
-        int[] arregloOrdenado = mO.sortBySeleccion(arreglo);
-        //System.out.println("  ***** Ascendente *****");
-        mO.printArreglo(arregloOrdenado);
-        System.out.println("  ");
+        
+        // Ordenar de manera ascendente
+        System.out.println("***** Ascendente *****");
+        int[] arregloOrdenadoAsc = mO.sortBySeleccion(arreglo, true);
+        mO.printArreglo(arregloOrdenadoAsc);
+        System.out.println();
+
+        // Ordenar de manera descendente
+        System.out.println("***** Descendente *****");
+        int[] arregloOrdenadoDesc = mO.sortBySeleccion(arreglo, false);
+        mO.printArreglo(arregloOrdenadoDesc);
+        System.out.println();
         
     }
 }
